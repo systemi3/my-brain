@@ -25,11 +25,8 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: contact
+  - type: markdown
     attributes:
-      label: 連絡先（メールアドレスなど・任意）
-      description: 個別に返信が必要な場合はご記入ください。空欄でも送信できます。
-      placeholder: example@example.com
-    validations:
-      required: false
+      value: |
+        ※ 返信はこのIssue上のコメントで行います。コメントが付くとGitHubから通知が届きます。
+        ※ メールアドレス等の個人情報は書かないでください（このページは公開されます）。
