@@ -37,6 +37,12 @@
 - アイデアが人に響かない理由について、「説明が下手なだけ」で片付けず、
   「相手の立場のつもりが自分の思考の立場替えになっていないか」まで踏み込んで整理した。
   → 詳細: [気づいた原則](self-reflection/principles.md)
+- Amazonメール本文の「お届け日」を注文日として使っていたバグを修正。
+  メールヘッダーの `Date` を使うのが正解。
+  → 詳細: [error-log/2026-07-01-amazon-mail-date.md](error-log/2026-07-01-amazon-mail-date.md)
+- 家計簿アプリ（kakeibo）のPhase 3・4が完了。Amazon注文メール解析、給与・収入・予算機能を追加。
+  テーブル設計で「Amazon・ヨドバシ・iHerbは同じ構造」と気づき統合できた。
+  → 詳細: [python/2026-07-01-kakeibo-phase3-4.md](python/2026-07-01-kakeibo-phase3-4.md)
 
 ## フォルダ構成
 
