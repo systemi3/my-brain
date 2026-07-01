@@ -1,0 +1,35 @@
+name: 💬 お問い合わせ
+description: ご質問・ご意見・お仕事のご相談などはこちらからお願いします
+title: "[お問い合わせ] "
+labels: ["inquiry"]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: 種別
+      description: 近いものを選んでください
+      options:
+        - 質問
+        - アイデアへのコメント・感想
+        - お仕事のご相談
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: お問い合わせ内容
+      description: できるだけ具体的にご記入ください
+      placeholder: ここに内容を書いてください
+    validations:
+      required: true
+
+  - type: input
+    id: contact
+    attributes:
+      label: 連絡先（メールアドレスなど・任意）
+      description: 個別に返信が必要な場合はご記入ください。空欄でも送信できます。
+      placeholder: example@example.com
+    validations:
+      required: false
