@@ -132,6 +132,33 @@ volumes:                  # ← 永続化するデータの宣言
 
 ---
 
+## ローカル Supabase
+
+```bash
+supabase start      # 約10個のコンテナが起動（初回はDLで数分）
+supabase stop       # 終了。使わない時は止める（2〜4GB消費）
+supabase db reset   # ★ローカルでは push ではなく reset
+                    #   全マイグレーションをまっさらなDBに順番に適用
+                    #   = マイグレーションの検証も兼ねる
+```
+
+| URL | 用途 |
+|---|---|
+| http://localhost:54321 | API |
+| http://localhost:54323 | Studio（管理画面） |
+| http://localhost:54324 | Inbucket（疑似受信箱。実メールは飛ばない） |
+
+Next.js側は環境変数2行の書き換えだけで切り替わる：
+
+```
+NEXT_PUBLIC_SUPABASE_URL=http://localhost:54321
+NEXT_PUBLIC_SUPABASE_ANON_KEY=（startで表示されたキー）
+```
+
+→ 詳細: [ローカルSupabaseとセルフホスト](2026-07-04-local-supabase-selfhost.md)
+
+---
+
 ## 【番外】Windows / WSL2 のコマンド
 
 Colima は macOS 専用。Windows での対応物は WSL2。
