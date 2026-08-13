@@ -43,6 +43,10 @@
 - 家計簿アプリ（kakeibo）のPhase 3・4が完了。Amazon注文メール解析、給与・収入・予算機能を追加。
   テーブル設計で「Amazon・ヨドバシ・iHerbは同じ構造」と気づき統合できた。
   → 詳細: [python/2026-07-01-kakeibo-phase3-4.md](python/2026-07-01-kakeibo-phase3-4.md)
+- **クライアントとサーバーは別物**。aiderを殺してもLM Studioは止まらないし、
+  `docker` コマンドがあってもColimaが止まっていれば何も動かない。**同じ構造が繰り返し出てくる。**
+  → 詳細: [LM Studio暴走の件](local-llm/2026-08-12-lmstudio-runaway.md) /
+    [コンテナ環境の選択](container/2026-08-12-docker-alternatives.md)
 
 ## フォルダ構成
 
@@ -51,8 +55,12 @@
 | `python/` | Pythonの学習メモ |
 | `git/` | Gitまわりの学び |
 | `error-log/` | ハマったエラーと解決策 |
+| `local-llm/` | ローカルLLM（LM Studio / Ollama / aider）の学びとコマンド |
+| `container/` | コンテナ環境（Colima / Docker）の学びとコマンド |
 | `ideas/` | 作りたいもの・思いついたアイデア |
 | `self-reflection/` | 出したアイデアが響かなかったとき、何が理由だったかの記録 |
+
+各フォルダの `commands.md` は、困ったときに最初に開くコマンド早見表です。
 
 新しいテーマが増えたら、フォルダを追加していってください。
 
